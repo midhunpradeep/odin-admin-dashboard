@@ -56,6 +56,8 @@ html {
 }
 
 .header {
+  --icon-size: 1.67rem;
+
   background-color: var(--color-1);
   display: grid;
   grid-template: 1fr 2fr / 2fr 1fr;
@@ -72,7 +74,7 @@ html {
 }
 
 .header .search-section button {
-  width: 2rem;
+  width: var(--icon-size);
   aspect-ratio: 1 / 1;
   background: none;
   border: none;
@@ -116,11 +118,15 @@ html {
 }
 
 .header .profile-section img {
-  width: 2rem;
+  width: var(--icon-size);
 }
 
 .header .profile-section .notifications-btn {
   margin-left: auto;
+}
+
+.header .profile-section .profile-img-btn img {
+  width: calc(1.5 * var(--icon-size));
 }
 
 .header .profile-section .profile-btn {
