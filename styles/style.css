@@ -59,7 +59,9 @@ html {
   background-color: var(--color-1);
   display: grid;
   grid-template: 1fr 2fr / 2fr 1fr;
+  gap: 3rem;
   padding: 1rem 3rem;
+  font-weight: 600;
 }
 
 .header .search-section {
@@ -105,6 +107,26 @@ html {
 .header .search-section input[type="search"]:focus {
   outline: none;
   box-shadow: 0.1rem 0.1rem 0.25rem var(--color-2);
+}
+
+.header .profile-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header .profile-section img {
+  width: 2rem;
+}
+
+.header .profile-section .notifications-btn {
+  margin-left: auto;
+}
+
+.header .profile-section .profile-btn {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 1rem;
 }
 
 .content {
