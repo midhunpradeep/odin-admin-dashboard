@@ -1,12 +1,58 @@
+:root {
+  --color-1: #f9f7f7;
+  --color-2: #dbe2ef;
+  --color-3: #3f72af;
+  --color-4: #112d4e;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   min-height: 100dvh;
   display: grid;
-  grid-template: 1fr 5fr / 1fr 4fr;
+  grid-template: 1fr 5fr / 14rem 1fr;
 }
 
 .sidebar {
-  background-color: dodgerblue;
   grid-row: 1 / -1;
+  background-color: var(--color-3);
+  color: var(--color-2);
+  font-weight: 600;
+  display: grid;
+  grid-template-rows: max-content max-content max-content;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.sidebar ul:first-child {
+  font-size: 1.5rem;
+}
+
+.sidebar ul img {
+  filter: invert(99%) sepia(21%) saturate(2285%) hue-rotate(177deg)
+    brightness(100%) contrast(88%);
+}
+
+.sidebar ul a {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar ul a:hover {
+  color: var(--color-1);
 }
 
 .header {
