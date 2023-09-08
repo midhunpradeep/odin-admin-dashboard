@@ -12,7 +12,7 @@ html {
 .container {
   min-height: 100dvh;
   display: grid;
-  grid-template: 1fr 5fr / 14rem 1fr;
+  grid-template: 10rem 5fr / 14rem 1fr;
 }
 
 .sidebar {
@@ -56,7 +56,55 @@ html {
 }
 
 .header {
-  background-color: gold;
+  background-color: var(--color-1);
+  display: grid;
+  grid-template: 1fr 2fr / 2fr 1fr;
+  padding: 1rem 3rem;
+}
+
+.header .search-section {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header .search-section button {
+  width: 2rem;
+  aspect-ratio: 1 / 1;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.header .search-section button:hover {
+  transform: scale(1.1);
+}
+
+.header .search-section button:active {
+  transform: none;
+}
+
+.header .search-section label {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.header .search-section input[type="search"] {
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--color-2);
+  padding: 0.33rem 1rem;
+}
+
+.header .search-section input[type="search"]:focus {
+  outline: none;
+  box-shadow: 0.1rem 0.1rem 0.25rem var(--color-2);
 }
 
 .content {
