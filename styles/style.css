@@ -12,7 +12,7 @@ html {
 .container {
   min-height: 100dvh;
   display: grid;
-  grid-template: 10rem 5fr / 14rem 1fr;
+  grid-template: max-content 5fr / 14rem 1fr;
 }
 
 .sidebar {
@@ -133,6 +133,25 @@ html {
   color: inherit;
   text-decoration: none;
   padding: 0 1rem;
+}
+
+.header .greeter {
+  display: grid;
+  grid-template: max-content max-content / max-content max-content;
+  gap: 0 1rem;
+}
+
+.header .greeter img {
+  width: calc(3 * var(--icon-size));
+  grid-row: 1 / -1;
+}
+
+.header .greeter .greeter-line-1 {
+  align-self: end;
+}
+
+.header .greeter .greeter-line-2 {
+  font-size: 1.5rem;
 }
 
 .content {
