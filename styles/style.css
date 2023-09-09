@@ -176,5 +176,65 @@ html {
 }
 
 .content {
-  background-color: hotpink;
+  background-color: var(--color-2);
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.content .projects {
+  grid-row: 1 / -1;
+}
+
+.content > div > h2 {
+  margin-bottom: 1rem;
+}
+
+.content .project-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
+  gap: 1rem;
+}
+
+.content .project-card-container > div {
+  display: grid;
+  grid-template: max-content max-content 1fr / 1fr;
+  background-color: var(--color-1);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  border-left: 0.5rem solid var(--color-3);
+  transition: all 0.1s ease-in-out;
+}
+
+.content .project-card-container > div:hover {
+  transform: scale(1.01);
+}
+
+.content .project-card-container > div p {
+  font-weight: 300;
+}
+
+.content .project-card-container > div .project-buttons {
+  align-self: end;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content .project-card-container > div .project-buttons button {
+  border: none;
+  background: none;
+  padding: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.content .project-card-container > div .project-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.content .project-card-container > div .project-buttons button img {
+  width: 1.67rem;
 }
