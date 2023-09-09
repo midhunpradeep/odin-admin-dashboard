@@ -178,9 +178,9 @@ html {
 .content {
   background-color: var(--color-2);
   display: grid;
-  grid-template: 1fr 1fr / 2fr 1fr;
-  gap: 1rem;
-  padding: 1rem;
+  grid-template: max-content max-content / 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .content .projects {
@@ -237,4 +237,36 @@ html {
 
 .content .project-card-container > div .project-buttons button img {
   width: 1.67rem;
+}
+
+.content .announcements-container {
+  background: var(--color-1);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: grid;
+  grid-template: repeat(auto-fit, 1fr) / 1fr;
+}
+
+.content .announcements-container > div {
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-bottom: 0.15rem solid var(--color-2);
+  transition: all 0.1s ease-in-out;
+}
+
+.content .announcements-container > div:hover {
+  transform: scale(1.02);
+}
+
+.content .announcements-container > div:first-child {
+  padding-top: 0;
+}
+
+.content .announcements-container > div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.content .announcements-container > div > p {
+  font-weight: 300;
 }
