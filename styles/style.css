@@ -178,7 +178,7 @@ html {
 .content {
   background-color: var(--color-2);
   display: grid;
-  grid-template: max-content max-content / 2fr 1fr;
+  grid-template: min-content 1fr / 2fr 1fr;
   gap: 2rem;
   padding: 2rem;
 }
@@ -191,10 +191,18 @@ html {
   margin-bottom: 1rem;
 }
 
+.content .projects {
+  display: flex;
+  flex-direction: column;
+}
+
 .content .project-card-container {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
   gap: 1rem;
+  justify-content: stretch;
+  align-content: stretch;
 }
 
 .content .project-card-container > div {
